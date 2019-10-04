@@ -1,0 +1,45 @@
+/* Demonstrational Styles */
+
+.container,
+aside,
+section {
+	border-radius: 10px;
+}
+
+aside,
+section {
+	border: 1px solid white;
+  margin-right: 1.096%;
+}
+
+span {
+	font-family: monospace;
+	font-size: 16px;
+	color: white;
+	border: 1px solid white;
+	border-top-left-radius: 10px;
+	padding: 0 3px 2px;
+}
+
+.container {
+	background: #e0e0e0;
+  width: 95vw;
+	height: 50.13vh;
+	padding: 1.096%;
+}
+
+aside {
+	background: #5197d5;
+  width: 33.3%;
+	height: 100%;
+	float: left;
+}
+
+section {
+	background: #fdd72a;
+  width: 33.3%;
+	height: 100%;
+	float: left;
+}
+
+/* Layout Styles */
