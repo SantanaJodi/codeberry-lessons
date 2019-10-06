@@ -1,0 +1,314 @@
+main {
+  background-image: url(https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png);
+  width: 100vw;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;
+}
+
+h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  padding-top: 1em;
+}
+
+h3 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: .8rem;
+  letter-spacing: .2rem;
+}
+
+h5 {
+  font-family: 'Muli', sans-serif;
+  font-size: .8rem;
+  font-style: italic;
+}
+
+p {
+  font-family: 'Muli', sans-serif;
+  font-size: .8rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+span {
+  color: #b7806e;
+}
+
+/* COVER IMG HEADER */
+header {
+  width: 100vw;
+  height: 100vh;
+  background: url(https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg) no-repeat center fixed;
+  background-size: cover;
+}
+
+.za-wrp {
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.za-title {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1.2rem 8rem;
+}
+
+.za-title h1 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #d2ba87;
+  white-space: pre-wrap;
+}
+
+.za-title hr {
+  margin-top: 1rem;
+  border: .5px solid #fff;
+  width: 8.5rem;
+}
+
+.za-date {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.za-date hr {
+  border: .5px solid #fff;
+  width: 1rem;
+  margin: auto .5rem;
+  /* border: 1px solid red; */
+}
+
+/* CONTENT */
+/* Section - Locations */
+.loc {
+  color: #444349;
+}
+
+.activity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+.act-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 2.5rem 0;
+  width: 25vw;
+  /* border: 1px solid red; */
+}
+
+.act-card p {
+  margin-top: .3rem;
+}
+
+.loc-illust-cont {
+  width: 120px;
+  margin: 1.5rem 0;
+  /* border: 1px solid red; */
+}
+
+.loc-illust-cont img {
+  width: 100%;
+}
+
+/* Section - Program */
+.prog {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #d2ba87;
+}
+
+.prog-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prog-copy div {
+  margin: 2rem auto;
+}
+
+.tl {
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.prog-copy div p {
+  margin: .5rem auto;
+}
+
+/* Section - Gifts */
+.gifts {
+  color: #444349;
+}
+
+.gifts-pserif-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.gifts-pserif {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 1rem 0;
+  /* border: 1px solid red; */
+}
+
+.gifts-pserif p {
+  margin: 2rem 0;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.gifts-illust-cont {
+  width: 120px;
+  /* border: 1px solid red; */
+}
+
+.gifts-illust-cont img {
+  width: 100%;
+}
+
+/* Section - QnA */
+.qna {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #d2ba87;
+}
+
+.qna-card-wrp {
+  display: flex;
+  vertical-align: top;
+  justify-content: center;
+  padding: 1rem 0 2rem 0;
+  /* border: 1px solid red; */
+}
+
+.qna-card {
+  max-width: 25vw;
+  margin: 0 1rem;
+  /* border: 1px solid red; */
+}
+
+.qna-card h3 {
+  margin: 1rem 0;
+}
+
+.qna-card .bold {
+  margin-top: 1rem;
+}
+
+.qna-card p {
+  margin: .5rem 0;
+  line-height: 1rem;
+}
+
+/* Section - Contact */
+.cnt {
+  color: #444349;
+}
+.cnt-copy {
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  padding: .5rem 0;
+}
+
+.cnt-copy p {
+  margin: 2rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: #606060;
+  color: #fff;
+  text-align: center;
+  height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+
+  /* Header */
+  .za-title {
+    padding: 1rem 4rem;
+  }
+
+  .za-title h1 {
+    font-size: 3rem;
+  }
+
+  .za-title h4 {
+    line-height: 1.4rem;
+  }
+
+  /* Location */
+  .activity {
+    flex-flow: column;
+  }
+
+  .act-card {
+    width: 50vw;
+  }
+
+  /* Gifts */
+  .gifts-pserif {
+    width: 50vw;
+  }
+
+  .gifts-pserif p {
+    line-height: 1.2rem;
+  }
+
+  /* QnA */
+
+  .qna-card-wrp {
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .qna-card {
+    max-width: 80vw;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Contacts */
+  .cnt-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+  }
+
+  .cnt-copy p {
+    width: 90vw;
+    margin: .5rem 0;
+  }
+
+  /* Footer */
+  footer p {
+    width: 90vw;
+  }
+
+}
