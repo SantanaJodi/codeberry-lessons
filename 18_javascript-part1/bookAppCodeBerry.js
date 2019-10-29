@@ -37,10 +37,10 @@ var bookCatalog = {
     'has been read': false,
     'main characters': [],
     'quotes': {},
-    'borrowed by': 'kathy',
+    'borrowed by': null,
     'rating': undefined
   },
-  'page marker': function (book) { // perhatikan penggunaan parameter pada METODE ini
+  'page marker': function (book) {
     var pageInitial = this[book].page;
     this[book].page = prompt('What page are you on in the book titled ' + this[book].title + '?');
     if (typeof pageInitial === 'undefined') {
@@ -49,51 +49,40 @@ var bookCatalog = {
       alert('You are on page ' + this[book].page + ' in the book titled ' + this[book].title + '. Last time you were on page ' + pageInitial + ', so you have read ' + (this[book].page - pageInitial) + ' pages this time.');
     }
   },
-  'unread': function() {
-    var bookToRead = [];
-    for(var book in this) {
-      if(this[book]['has been read'] ===  false){
-        bookToRead.push(this[book].title);
+  'unread': function () {
+    var booksToRead = [];
+    for (var book in this) {
+      if (this[book]['has been read'] === false) {
+        booksToRead.push(this[book].title);
       }
     }
-    if (bookToRead.length === 0){
-      console.log('Kamu telah membaca semua buku')
+    if (booksToRead.length === 0) {
+      console.log('You have read all your books.');
     } else {
-      console.log('Buku yang belum kamu baca adalah: ' + bookToRead);
+      console.log('You have not read the following books: ' + booksToRead);
     }
   },
-  'change property': function(bookObj, bookProp) {
-		this[bookObj][bookProp] = prompt('Masukan nilai baru dari property ' + bookProp + ' pada buku ' + this[bookObj].title + '!');
-		console.log('nilai baru dari property ' + bookProp + ' dari buku ' + this[bookObj].title + ' adalah ' + this[bookObj][bookProp] + '.')
-	},
-  'add quote': function(bookObj, qPage) {
-		this[bookObj].quotes[qPage] = prompt('Masukan kutipan yang anda temukan di buku ' + this[bookObj].title + ' di halaman ' + qPage + '.');
-		console.log('Kamu menemukan quote ' + '\'' + bookCatalog.push(this[bookObj].quotes[qPage]) + '\'');
-	},
-  'borrowed': function(){
-    var bookRacks = [];
-    for(var borrow in this){
-      if(typeof this[borrow] != 'function'){
-        bookRacks.push(borrow);
+  'change property': function (book, property) {
+    this[book][property] = prompt('What is the new value of the ' + property + ' property of ' + this[book].title + '?');
+    alert('The new value of the ' + property + ' property of ' + this[book].title + ' is the following: ' + this[book][property] + '.');
+  },
+  'add quote': function (book, page) {
+    this[book].quotes[page] = prompt('What is the quote that you would like to add to your quotes in ' + this[book].title + '?');
+    alert('You have added the following quote to your quotes in ' + this[book].title + ': ' + this[book].quotes[page]);
+  },
+  'borrowed': function () {
+    var borrowedBooks = [];
+    for (var book in this) {
+      if ('borrowed by' in this[book]) {
+        if (this[book]['borrowed by'] !== null) {
+          borrowedBooks.push(this[book].title);
+        }
       }
     }
-    var borrowedBook = [];
-    for(var i=0; i<bookRacks.length; i++) {
-      var myBookie = this[bookRacks[i]]['borrowed by'];
-      if(myBookie != null){
-        borrowedBook.push(this[bookRacks[i]].title);
-      }
+    if (borrowedBooks.length === 0) {
+      console.log('None of your books are currently borrowed.');
+    } else {
+      console.log('The following books are currently borrowed: ' + borrowedBooks);
     }
-    console.log(borrowedBook);
   }
 };
-
-bookCatalog['page marker']('myBook3'); // untuk mengetahui page berapa kita terakhir membaca
-
-bookCatalog.unread(); // Untuk mengetahui buku yang belum kamu baca
-
-bookCatalog['change property']('myBook3', 'rating'); // Untuk mengubah OBJECT VALUE yang ada dalam FUNCTION PARAMETER
-
-bookCatalog['add quote']('myBook3', 'p119'); // Untuk menambahkan quotes
-
-bookCatalog.borrowed(); // Untuk mengetahui buku yang mana yang sedang dipinjam

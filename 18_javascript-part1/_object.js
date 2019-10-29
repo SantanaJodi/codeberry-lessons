@@ -238,3 +238,19 @@ if (john.exType() === tom.exType()) {
 } else {
 	console.log(false)
 }; // hasilnya false
+
+// Menambah nama karakter dalam quote
+var gotHouse = {
+	houseOne: {
+		houseName: 'Targaryen',
+		char: ['Daenaerys', 'Viserys', 'Aegon'],
+		quotes: {
+			quoteOne: 'I have never been nothing.',
+			quoteTwo: 'I will answer injustice with justice.',
+			quoteTri: ['My reign has just begun.'] // Harus diubah jadi array dulu
+		}
+	}
+};
+
+gotHouse.houseOne.quotes.quoteTri.push('Raegar'); // masukin nilainya dengan .push()
+console.log(gotHouse.houseOne.quotes.quoteTri);
