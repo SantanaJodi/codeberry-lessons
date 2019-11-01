@@ -1,0 +1,64 @@
+body{
+  font-family: sans-serif;
+  color: #fafafa;
+  font-size: 16px;
+  background-color: #28272a;
+  font-weight: bold;
+}
+
+h1{
+  color: #ec1f7f;
+}
+
+.test{
+  border: 1px solid red;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center-column{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.far{
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* specific style */
+.section-one{
+  height: 100vh;
+}
+
+.hero-text{
+  font-family: sans-serif;
+  font-style: italic;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card-wrp{
+  flex-wrap: wrap;
+}
+
+.rect{
+  border-radius: .4rem;
+  background-color: #28272a;
+  width: 10rem;
+  height: 14rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+  margin: 2rem;
+  transition: 1s;
+  color: #935dff;
+}
+
+.rect:hover{
+  box-shadow: 0 0 24px rgba(147, 93, 255, .3);
+}
